@@ -6,7 +6,7 @@ let num1 = 3;
 let num2 = 4;
 if (num1 > num2) {
   console.log(num1);
-} else {
+} else if (num1 < num2) {
   console.log(num2);
 }
 
@@ -16,7 +16,7 @@ if (num1 > num2) {
 
 let a = 3;
 let b = 5;
-if (a != b) {
+if (a !== b) {
   console.log("not equal");
 }
 
@@ -37,7 +37,7 @@ let c = 18;
 let d = 10;
 if (c === 8 || d === 8) {
   console.log("uno dei numeri è ugale ad 8");
-} else if (c - d === 8 || c + d === 8) {
+} else if (c - d === 8 || d - c === 8 || c + d === 8) {
   console.log("il risultato è uguale a 8");
 }
 
@@ -47,14 +47,33 @@ if (c === 8 || d === 8) {
   Crea un algoritmo che determini l'ammontare totale che deve essere addebitato all'utente per il checkout.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let totalShoppingCart = 40;
+if (totalShoppingCart > 50) {
+  console.log(
+    "La spedizione è gratutita. La spesa totate è di " + totalShoppingCart
+  );
+} else if (totalShoppingCart < 50) {
+  console.log(
+    "La spedizione è di 10 €. Il totale è " + (totalShoppingCart + 10)
+  );
+}
 
 /* ESERCIZIO 6
   Stai lavorando su un sito di e-commerce. Oggi è il Black Friday e viene applicato il 20% su ogni prodotto.
   Modifica la risposta precedente includendo questa nuova promozione nell'algoritmo, determinando come prima se le spedizioni sono gratuite oppure no e e calcolando il totale.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+totalShoppingCart = 40;
+newTotalShoppingCart = totalShoppingCart * 0.8;
+if (newTotalShoppingCart > 50) {
+  console.log(
+    "La spedizione è gratutita. La spesa totate è di " + newTotalShoppingCart
+  );
+} else if (newTotalShoppingCart < 50) {
+  console.log(
+    "La spedizione è di 10 €. Il totale è " + (newTotalShoppingCart + 10)
+  );
+}
 
 /* ESERCIZIO 7
   Crea tre variabili, e assegna un valore numerico a ciascuna di esse.
@@ -62,33 +81,35 @@ if (c === 8 || d === 8) {
   Alla fine mostra il risultato in console.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
-
 /* ESERCIZIO 8
   Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let num3 = 56;
+console.log(typeof num3);
 
 /* ESERCIZIO 9
   Crea un algoritmo per controllare se un numero fornito sia pari o dispari (suggerimento: cerca l'operatore modulo su un motore di ricerca)
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let z = 34;
+if (z % 2 === 0) {
+  console.log(z + " è pari");
+} else {
+  console.log(z + " è dispari");
+}
 
 /* ESERCIZIO 10
   Modifica la logica del seguente algoritmo in modo che mostri in console il messaggio corretto in ogni circostanza.
-  let val = 7
-  if (val < 10) {
-      console.log("Meno di 10");
-    } else if (val < 5) {
-      console.log("Meno di 5");
-    } else {
-      console.log("Uguale a 10 o maggiore");
-    }
+let val = 7;
+if (val < 10) {
+  console.log("Meno di 10");
+} else if (val < 5) {
+  console.log("Meno di 5");
+} else {
+  console.log("Uguale a 10 o maggiore");
+}
 */
-
-/* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 11
   Fornito il seguente oggetto, scrivi del codice per aggiungere una proprietà "city", il cui valore sarà "Toronto".
@@ -99,29 +120,37 @@ const me = {
   lastName: "Doe",
   skills: ["javascript", "html", "css"],
 };
+console.log(me);
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+me.city = "Toronto";
+console.log(me);
 
 /* ESERCIZIO 12
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere la proprietà "lastName".
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+delete me.lastName;
+console.log(me);
 
 /* ESERCIZIO 13
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere l'ultimo elemento della proprietà "skills".
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+me.skills.pop();
+console.log(me);
 
 /* ESERCIZIO 14
   Scrivi del codice per creare un array inizialmente vuoto. Riempilo successivamente con i numeri da 1 a 10.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+const myArr = [];
+console.log(myArr);
+myArr.push(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+console.log(myArr);
 
 /* ESERCIZIO 15
   Scrivi del codice per sostituire l'ultimo elemento dell'array, ovvero il valore 10, con il valore 100.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+myArr.splice(9, 9, 100);
+console.log(myArr);
